@@ -1,0 +1,12 @@
+.App{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.App-item{
+    border: 5px solid black;
+    border-radius: 3%;
+    max-width: 350px;
+}
