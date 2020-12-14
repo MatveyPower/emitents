@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import './price-changes.css'
+import "./price-changes.css"
 function generateID() {
     return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (c) => {
         const r = (Math.random() * 16) | 0,
@@ -41,14 +41,32 @@ const PriceChanges = ({ value }) => {
 
     console.log(close)
 
-
-    return (<ul>
-        {open && open.map((item,index) =>{
-            return(<li key = {generateID()}>
-                {`${index+1} Неделя. На момент открытия:${item}, закрытия${close[index]}`}
-            </li>)
-        })}
-    </ul>)
+    return (
+        <ul className = 'list-group'>
+            {open &&
+                open.map((item, index) => {
+                    return (
+                        <li key={generateID()}>
+                            {`${
+                                index + 1
+                            } Неделя. На момент открытия:${item}, закрытия${
+                                close[index]
+                            }. Цена изменилась на ${
+                                (close[index] - item).toFixed(2) > 0
+                                    ? (
+                                          ((close[index] - item) * 100) /
+                                          item
+                                      ).toFixed(2)
+                                    : (
+                                          ((close[index] - item) * 100) /
+                                          item
+                                      ).toFixed(2)
+                            }%`}
+                        </li>
+                    )
+                })}
+        </ul>
+    )
 }
 
 export default PriceChanges

@@ -11,53 +11,53 @@ import {
 
 const data = [
     {
-        name: "Page A",
-        mv: 4000,
-        sv: 2400,
-        yv: 2400,
-        amt: 2400,
+        name: "1 неделя",
+        MTS: 265.13,
+        SBER: 96,
+        YNDX: 1500,
+        amt: 600,
     },
     {
-        name: "Page B",
-        mv: 3000,
-        sv: 1398,
-        yv: 2400,
-        amt: 2210,
+        name: "2 неделя",
+        MTS: 270,
+        SBER: 98,
+        YNDX: 1501,
+        amt: 620,
     },
     {
-        name: "Page C",
-        mv: 2000,
-        sv: 9800,
-        yv: 2400,
-        amt: 2290,
+        name: "3 неделя",
+        MTS: 268.4,
+        SBER: 98,
+        YNDX: 1522,
+        amt: 800,
     },
     {
-        name: "Page D",
-        mv: 2780,
-        sv: 3908,
-        yv: 2400,
-        amt: 2000,
+        name: "4 неделя",
+        MTS: 283,
+        SBER: 101,
+        YNDX: 1503,
+        amt: 900,
     },
     {
-        name: "Page E",
-        mv: 1890,
-        sv: 4800,
-        yv: 2400,
-        amt: 2181,
+        name: "5 неделя",
+        MTS: 264,
+        SBER: 102,
+        YNDX: 1504,
+        amt: 860,
     },
     {
-        name: "Page F",
-        mv: 2390,
-        sv: 3800,
-        yv: 2400,
-        amt: 2500,
+        name: "6 неделя",
+        MTS: 282,
+        SBER: 99,
+        YNDX: 1501,
+        amt: 850,
     },
     {
-        name: "Page G",
-        mv: 3490,
-        sv: 4300,
-        yv: 2400,
-        amt: 2100,
+        name: "7 неделя",
+        MTS: 267,
+        SBER: 98,
+        YNDX: 1503,
+        amt: 890,
     },
 ]
 
@@ -84,12 +84,12 @@ export default class Example extends PureComponent {
                 <Legend />
                 <Line
                     type="monotone"
-                    dataKey="mv"
+                    dataKey="MTS"
                     stroke="#8884d8"
                     activeDot={{ r: 8 }}
                 />
-                <Line type="monotone" dataKey="sv" stroke="#82ca9d" />
-                <Line type="monotone" dataKey="yv" stroke="#E82E41" />
+                <Line type="monotone" dataKey="SBER" stroke="#82ca9d" />
+                <Line type="monotone" dataKey="YNDX" stroke="#E82E41" />
             </LineChart>
         )
     }

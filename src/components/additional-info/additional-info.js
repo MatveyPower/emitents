@@ -28,7 +28,7 @@ const AdditionalInfo = ({ value }) => {
     }
     return (
         <ul className="list-group">
-            Дополнительная информация
+            <strong>Дополнительная информация</strong>
             {arr &&
                 arr.map((item) => {
                     return <li key={generateID}>{item}</li>
